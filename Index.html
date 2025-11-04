@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca Mágica</title>
+<style>
+    body {
+        font-family: "Comic Sans MS", sans-serif;
+        background: linear-gradient(to bottom, #fff4cc, #ffcc66);
+        margin: 0;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    header {
+        background: linear-gradient(90deg, #ff9900, #ff6600);
+        color: white;
+        text-align: center;
+        padding: 25px;
+        font-size: 2.3em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px #00000050;
+        position: relative;
+        z-index: 10;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 30px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .book {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .book:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+
+    .book img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .book h3 {
+        color: #ff6600;
+        margin-top: 10px;
+    }
+
+    .book p {
+        color: #333;
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    .book a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #ff9900;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .book a:hover {
+        background-color: #ff6600;
+    }
+
+    #quiz {
+        background-color: #fff3cd;
+        padding: 40px 20px;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    #quiz h2 {
+        color: #d17c00;
+    }
+
+    button {
+        background-color: #ff9900;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 1em;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff6600;
+    }
+
+    footer {
+        background: linear-gradient(90deg, #ff9900, #ff6600);
+        text-align: center;
+        padding: 15px;
+        color: white;
+        font-size: 0.9em;
+        line-height: 1.5em;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* EFEITO DE ESTRELAS MÁGICAS */
+    .star {
+        position: fixed;
+        top: 0;
+        width: 5px;
+        height: 5px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 10px white;
+        animation: fall linear infinite;
+        z-index: 1;
+        opacity: 0.8;
+    }
+
+    @keyframes fall {
+        0% {transform: translateY(0) translateX(0) scale(1);}
+        100% {transform: translateY(100vh) translateX(50px) scale(0);}
+    }
+</style>
+</head>
+<body>
+
+<header>📚 Biblioteca Mágica ✨</header>
+
+<section class="container">
+    <div class="book">
+        <img src="https://i0.wp.com/lh6.ggpht.com/_Bh4tn3MUo8U/S5S5sRWs7_I/AAAAAAAABJ4/9qjyhnpAh40/s576/image0-202.jpg" alt="Alice no País das Maravilhas">
+        <h3>Alice no País das Maravilhas</h3>
+        <p>Alice cai em um buraco e descobre um mundo cheio de criaturas curiosas e situações mágicas. Escrito por Lewis Carroll.</p>
+        <a href="https://www.ebooksbrasil.org/adobeebook/alicep.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4h0fpwkvI3j3HysBf45jB8Yi3gQl8hSrPWV4c2pbR_-hQhbfDH7NHLsxz&s=10" alt="As Viagens de Gulliver">
+        <h3>As Viagens de Gulliver</h3>
+        <p>O viajante Gulliver visita terras incríveis, cheias de seres fantásticos e reflexões sobre a humanidade. De Jonathan Swift.</p>
+        <a href="https://ddcus.org/pdf/summer_reading/9th_Grade/Viagens%20de%20Gulliver%20-%20BEAP%209%20Portuguese.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDM-sQpJe61Np2dxXLbe8bHcV6htxk4tbxVUTeDsavXw&s=10" alt="Narizinho do Reino Encantado">
+        <h3>Narizinho do Reino Encantado</h3>
+        <p>As aventuras mágicas de Narizinho e seus amigos do Sítio do Picapau Amarelo. Uma obra encantadora de Monteiro Lobato.</p>
+        <a href="https://ccbj.redelivre.org.br/files/2020/04/Reina%C3%A7%C3%B5es-de-Narizinho-Monteiro-Lobato.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh4wSOz2RuHmrtJZ7_9YVBDWGjmvsgS86EjfPK6aQa_A&s=10" alt="O Pequeno Príncipe">
+        <h3>O Pequeno Príncipe</h3>
+        <p>Um menino de outro planeta ensina lições de amizade, amor e sabedoria em uma jornada poética. De Antoine de Saint-Exupéry.</p>
+        <a href="https://www.sesirs.org.br/sites/default/files/paragraph--files/o_pequeno_principe_-_antoine_de_saint-exupery_1.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUsa6nDb0AjBZEFErQXbfn2j3TRz6708gCHD8e_Q_Ow&s=10" alt="Dom Quixote">
+        <h3>Dom Quixote</h3>
+        <p>Um homem sonhador acredita ser um cavaleiro e sai em aventuras com seu fiel escudeiro Sancho Pança. Escrito por Miguel de Cervantes.</p>
+        <a href="https://www.sesirs.org.br/sites/default/files/paragraph--files/dom_quixote_-_cervantes.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2ktNrig9z7LT_lpCttuzCUc_zzgGpNtcq0GK8KRkTA&s=10" alt="O Mágico de Oz">
+        <h3>O Mágico de Oz</h3>
+        <p>Dorothy é levada por um ciclone para uma terra mágica e vive aventuras com o Espantalho, o Homem de Lata e o Leão.</p>
+        <a href="https://familiaitinerante.com.br/wp-content/uploads/2020/07/O-Magico-de-Oz.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81r7M443JBL.jpg" alt="Peter Pan">
+        <h3>Peter Pan</h3>
+        <p>O menino que não queria crescer leva Wendy e seus irmãos para a Terra do Nunca, em uma aventura cheia de fantasia.</p>
+        <a href="https://cauemcardoso.wordpress.com/wp-content/uploads/2010/01/j-m-barrie-perter-pan.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+
+    <div class="book">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVgArtANjH-lMqwnnqohEmRVi_57juSiGx2BlKNDHqw&s=10" alt="Pinóquio">
+        <h3>Pinóquio</h3>
+        <p>O boneco de madeira que sonha em ser um menino de verdade aprende lições sobre coragem e honestidade. De Carlo Collodi.</p>
+        <a href="https://www.obrassociais.org.br/images/unidades/atividades/VilaMorseB2/PIN%C3%93QUIO.pdf" target="_blank">📘 Baixar Livro</a>
+    </div>
+</section>
+
+<section id="quiz">
+    <h2>🎯 Quiz da Biblioteca Mágica</h2>
+    <p>Será que você conhece bem esses clássicos? Responda verdadeiro ou falso!</p>
+    <div id="pergunta" style="font-weight: bold; margin-top: 20px;"></div>
+    <div>
+        <button onclick="responder(true)">✅ Verdadeiro</button>
+        <button onclick="responder(false)">❌ Falso</button>
+    </div>
+    <p id="resultado" style="font-size: 1.2em; font-weight: bold;"></p>
+</section>
+
+<footer>
+    ✨ Criação de <b>Ivan Marques</b> — Incentivo à Leitura ✨<br>
+    Apoio e Supervisão: <b>Professora Regina Maria Pinna</b><br>
+    Faculdade Carlos Drummond de Andrade
+</footer>
+
+<audio id="sound-correct" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_20e8b99325.mp3?filename=success-1-6297.mp3"></audio>
+<audio id="sound-wrong" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_2c839b1a8a.mp3?filename=error-126627.mp3"></audio>
+
+<script>
+const perguntas = [
+    {texto: "Alice segue um coelho branco e cai em um buraco mágico. (Alice no País das Maravilhas)", resposta: true},
+    {texto: "Gulliver viaja para o espaço e encontra alienígenas. (As Viagens de Gulliver)", resposta: false},
+    {texto: "Narizinho é uma personagem criada por Monteiro Lobato. (Narizinho do Reino Encantado)", resposta: true},
+    {texto: "O Pequeno Príncipe vive em um planeta com três vulcões. (O Pequeno Príncipe)", resposta: true},
+    {texto: "Dom Quixote acha que moinhos de vento são gigantes. (Dom Quixote)", resposta: true},
+    {texto: "Dorothy encontra um dragão no caminho de tijolos amarelos. (O Mágico de Oz)", resposta: false},
+    {texto: "Peter Pan é conhecido como o menino que nunca cresce. (Peter Pan)", resposta: true},
+    {texto: "Pinóquio é feito de madeira e sonha em ser humano. (Pinóquio)", resposta: true}
+];
+
+let indice = 0;
+const somCerto = document.getElementById("sound-correct");
+const somErrado = document.getElementById("sound-wrong");
+
+function mostrarPergunta() {
+    if (indice < perguntas.length) {
+        document.getElementById("pergunta").innerText = perguntas[indice].texto;
+        document.getElementById("resultado").innerText = "";
+    } else {
+        document.getElementById("pergunta").innerText = "🎉 Parabéns! Você terminou o quiz mágico!";
+        document.querySelectorAll("button").forEach(btn => btn.style.display = "none");
+    }
+}
+
+function responder(resposta) {
+    const correta = perguntas[indice].resposta;
+    const resultado = document.getElementById("resultado");
+    if (resposta === correta) {
+        resultado.innerText = "✨ Acertou! Muito bem!";
+        resultado.style.color = "green";
+        somCerto.play();
+    } else {
+        resultado.innerText = "❌ Ops! Tente novamente!";
+        resultado.style.color = "red";
+        somErrado.play();
+    }
+    indice++;
+    setTimeout(mostrarPergunta, 1500);
+}
+
+mostrarPergunta();
+
+/* Estrelas animadas */
+function criarEstrela() {
+    const estrela = document.createElement("div");
+    estrela.classList.add("star");
+    estrela.style.left = Math.random() * 100 + "vw";
+    estrela.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(estrela);
+    setTimeout(() => estrela.remove(), 8000);
+}
+setInterval(criarEstrela, 300);
+</script>
+
+</body>
+</html>
